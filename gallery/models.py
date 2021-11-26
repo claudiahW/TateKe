@@ -2,7 +2,10 @@ from django.db import models
 from cloudinary.models import CloudinaryField
 
 class photos(models.Model):
+     #image field
+    image_name= CloudinaryField('image')
     # title field
-    title = models.CharField(max_length=100)
-    #image field
-    image = CloudinaryField('image')
+    image_title = models.CharField(max_length=100)
+    image_description = models.TextField(max_length=100)
+
+   
