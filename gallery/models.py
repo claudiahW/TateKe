@@ -1,6 +1,7 @@
 from django.db import models
 from cloudinary.models import CloudinaryField
 
+
 class photos(models.Model):
      #image field
     image_name= CloudinaryField('image')
