@@ -8,7 +8,7 @@
   {% if title %}
   <title>Tate Kenya - {{title}}</title>
   {% else %}
-    <title> Tate Kenya </title>
+    <title> Tate Kenya</title>
   {% endif %}
 
   {% block styles %}
@@ -19,6 +19,12 @@
 </head>
 <body>
     {% include "navbar.html" %}
+    
+    {% block header %}
+
+    <h1 class= text-center >Welcome to the Tate Gallery Kenya</h1>
+
+    {% endblock %}
 
     {% block scripts %}
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
