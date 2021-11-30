@@ -1,0 +1,21 @@
+{%extends 'all-art/base.html'%}
+
+{% block content %}
+{{block.super}}
+
+
+<body>
+   <div class="row">
+    {%for pic in photo%}
+        <div class="col-md-6">
+            {{pic.title}}
+            <img src="{{pic.image.url}}" alt="" class="responsive">
+            {{pic.description}}
+            {{pic.category}}
+        </div>
+
+    {%endfor%}
+   </div>
+
+</body>
+{% endblock %}

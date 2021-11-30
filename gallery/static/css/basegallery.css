@@ -2,3 +2,9 @@ h1
 {
     color: blueviolet;
 }
+
+.responsive 
+{
+    width: 100%;
+    height: auto;
+}
