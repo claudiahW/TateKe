@@ -2,7 +2,7 @@ from django.http.response import Http404
 from django.shortcuts import render
 from django.http  import HttpResponse
 import datetime as dt
-from models import Category, Location, photos
+from .models import Category, Location, photos
 from django.core.exceptions import ObjectDoesNotExist
 
 
