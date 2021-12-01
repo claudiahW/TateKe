@@ -21,7 +21,7 @@ from decouple import config,Csv
 
 MODE=config("MODE", default="dev")
 SECRET_KEY = config('SECRET_KEY')
-DEBUG = config('DEBUG', default=False, cast=bool)
+DEBUG = config('DEBUG', default=True)
 
 DATABASES = {
        'default': dj_database_url.config(
@@ -43,14 +43,8 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
-# SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-g#v$gnxw95!^x&54cckv-3ztg-id29-&^^fras3s2kuupsdj#&'
-
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
-
-ALLOWED_HOSTS = []
-
 
 # Application definition
 
@@ -107,9 +101,9 @@ WSGI_APPLICATION = 'tateke.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'tateke',
-        'USER': 'claudbae',
-    'PASSWORD':'12345',
+        'NAME': config('DB_NAME'),
+        'USER': config('DB_USER'),
+    'PASSWORD':config('DB_PASSWORD'),
     }
 }
 
@@ -149,25 +143,43 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
+# STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+# STATIC_URL = '/static/'
+# STATICFILES_DIRS = [
+#  os.path.join(BASE_DIR, "static"),
+# ]
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [
- os.path.join(BASE_DIR, "static"),
+    os.path.join(BASE_DIR, "static"),
 ]
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
-MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-
-
-# Default primary key field type
-# https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
-
-DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-
+# adding config
 cloudinary.config( 
   cloud_name = "dwvv0zfnt", 
   api_key = "736757957247569", 
   api_secret = "Cjr0HzbCoQs3xvaxuGyHiOmGJTw" 
 )
+# cloudinary.config( 
+#   cloud_name = 'the-collector', 
+#   api_key = '385692492331583', 
+#   api_secret = 'wpPzGYYSWBJ_4NCwwSEC0YUMSO8'
+# )
+DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
+CLOUDINARY_STORAGE = {
+    'CLOUD_NAME': 'dwvv0zfnt',
+    'API_KEY': '736757957247569',
+    'API_SECRET': 'Cjr0HzbCoQs3xvaxuGyHiOmGJTw'
+}
+# MEDIA_URL = '/media/'
+# MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+
+# Default primary key field type
+# https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
+
+# DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
 
 django_heroku.settings(locals())
