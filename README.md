@@ -3,10 +3,10 @@
 This is the third Independent Project for Moringa Core on 05/08/2021.This project was generated with [python3.6]
 
 ## Description
-Password Locker app allows a user to safely store their accounts and their login credentials in one place.
+Tate gallery allows a user to login as admin and upload photos,delete and edit them.
 
 ## Features
-1. It uses python3.6.
+1. It uses python3.8.
 ## Known Bugs
 There are no known bugs.Kindly contact me in case you find one.
 
