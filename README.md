@@ -11,22 +11,17 @@ Password Locker app allows a user to safely store their accounts and their login
 There are no known bugs.Kindly contact me in case you find one.
 
 ## Technologies used
-The app is built tested and run using python3.6.
-This app is behavior driven.
+The app is built tested and run using python3.8.
+
 
 ## Contributors
 .Claudiah Wanjiru
 
-
-## Code scaffolding
-
-Run python3.6 run.py command to run the application.
-
 ## Testing
-use the command python3.6 user_test.py to test the functionality of the application.
+use the command python3.8 user_test.py to test the functionality of the application.
 
 
-## Running password locker
+## Running Tate Gallery
 use the command python3.8 manage.py runserver to run the application.
 
 ## Contact Information
