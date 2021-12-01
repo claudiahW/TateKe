@@ -33,3 +33,7 @@ use the command python3.8 manage.py runserver to run the application.
 ## Contact Information
 murungiclaud@gmail.com
 claudiah.wanjiru@students.moringaschool.com
+
+## LICENSE
+
+Copyright (c) 2021 Claudiah Wanjiru 
