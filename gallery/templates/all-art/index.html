@@ -9,7 +9,9 @@
     {%for pic in photo%}
         <div class="col-md-6">
             {{pic.title}}
-            <img src="{{pic.image.url}}" alt="" class="responsive">
+            <div class = "" data-toggle ="modal" data-target="#showPicModal{{pic.id}}">
+                <img src="{{pic.image.url}}" alt="" class="responsive">
+            </div>
             {{pic.description}}
             {{pic.category}}
         </div>
@@ -48,6 +50,18 @@
     {%endfor%}
 
    </div>
+   <div class="row">
+    <div class="col-md-6 locations">
+        <h2>Locations</h2>
+        {% for location in locations%}
+            <!-- loop through all the images -->      
+            <a class="loc" href="/?location={{location.id}}">
+                {{location.name}}
+            </a>
+            
+        {% endfor %}
 
+    </div>
+</div>
 </body>
 {% endblock %}
