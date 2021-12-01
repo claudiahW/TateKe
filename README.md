@@ -11,7 +11,13 @@ Tate gallery allows a user to login as admin and upload photos,delete and edit t
 There are no known bugs.Kindly contact me in case you find one.
 
 ## Technologies used
-The app is built tested and run using python3.8.
+Technologies used to develop this application:
+
+Python v3.8
+Django 3.1.3
+Django-Bootstrap
+HTML
+CSS
 
 
 ## Contributors
