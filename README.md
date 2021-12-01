@@ -27,7 +27,7 @@ use the command python3.6 user_test.py to test the functionality of the applicat
 
 
 ## Running password locker
-use the command python3.6 run.py to run the application.
+use the command python3.8 manage.py runserver to run the application.
 
 ## Contact Information
 murungiclaud@gmail.com
