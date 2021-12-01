@@ -14,7 +14,39 @@
             {{pic.category}}
         </div>
 
+        <div class="modal fade" id="showPicModal{{pic.id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered mode" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="modalPictureTitle">{{pic.name}}</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <img src="{{pic.image.url}}" class = "responsive"alt="{{pic.name}}">
+                  <p class="text-centre"><span>Description : </span>{{pic.description}}</p>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <p><span>Category : </span>{{pic.category}}</p>
+                        </div>
+                        <div class="col-md-4">
+                            <p><span>Location : </span>{{pic.location}}</p>
+                        </div>
+                        <div class="col-md-4">
+                            <p> <span>Posted : </span>{{pic.post_date}}</p>
+                        </div>
+                      </div>
+                    </div>
+                <div class="modal-footer">
+                    <p>Double click to copy this link!</p>
+                    <input class="form-control" type="text" value="{{pic.image.url}}" id="{{pic.id}}.url">
+                </div>
+              </div>
+            </div>
+        </div>
     {%endfor%}
+
    </div>
 
 </body>
