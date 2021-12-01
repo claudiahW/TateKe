@@ -1,6 +1,6 @@
-# Password Locker 
+# TATE GALLERY
 
-This is the third Independent Project for Moringa Core on 05/08/2021.This project was generated with [python3.6]
+This is the first Independent Project for django python on 28/11/2021.This project was generated with [python3.8]
 
 ## Description
 Tate gallery allows a user to login as admin and upload photos,delete and edit them.
