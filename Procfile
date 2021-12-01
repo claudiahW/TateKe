@@ -1,0 +1,1 @@
+web: gunicorn Tate.wsgi --log-file -
